@@ -10,11 +10,12 @@ import java.net.URL;
 import java.util.Scanner;
 
 public class NetworkUtils {
-    final static String URL_TOYS = "https://akabab.github.io/superhero-api/api/all.json";
+    final static String API_BASE_URL = "https://akabab.github.io/superhero-api/api/id/";
 
-    // Clase que devuelve la URL
-    public static URL buildURL(){
-        Uri builtUri = Uri.parse(URL_TOYS).buildUpon()
+
+    public static URL buildURL(String apiQuery){
+        Uri builtUri = Uri.parse(API_BASE_URL + apiQuery)
+                .buildUpon()
                 .build();
 
         URL url = null;
@@ -25,11 +26,9 @@ public class NetworkUtils {
             e.printStackTrace();
         }
 
-
         return url;
     }
 
-    // Clase que obtiene la respuesta desde la URL...
     public static String getResponseFromHttpUrl(URL url) throws IOException {
 
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();

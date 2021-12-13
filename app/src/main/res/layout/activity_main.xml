@@ -8,12 +8,18 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp">
 
+    <EditText
+        android:id="@+id/search_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Introduce el repositorio" />
+
     <TextView
         android:id="@+id/url_display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="URL HERE"
+        android:text="API de SuperHero: "
         android:textSize="22sp" />
 
     <ScrollView
@@ -24,7 +30,20 @@
             android:id="@+id/github_search_result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Your result here"
+            android:text="El resultado a continuación: "
             android:textSize="18sp" />
     </ScrollView>
+    <TextView
+        android:id="@+id/error_message_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:padding="16dp"
+        android:text="@string/error_message"/>
+    <ProgressBar
+        android:id="@+id/request_progress"
+        android:visibility="invisible"
+        android:layout_gravity="center"
+        android:layout_width="42dp"
+        android:layout_height="42dp" />
 </LinearLayout>

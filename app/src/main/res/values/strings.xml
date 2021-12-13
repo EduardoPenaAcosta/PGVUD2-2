@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">API Access</string>
-    <string name="launch">Launch</string>
-    <string name="clear">Clear</string>
-    <string name="search_pressed">Se ha comenzado la búsqueda…</string>
+    <string name="app_name">UD2-2 Control Errores</string>
+    <string name="search">Buscar</string>
+    <string name="search_pressed">¡Comienza la búsqueda del repositorio!</string>
+    <string name="error_message">Se encuentra vacío el repositorio o ha ocurrido un error. </string>
 </resources>
